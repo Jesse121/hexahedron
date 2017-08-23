@@ -1,9 +1,7 @@
 ### 旋转的六面体
 这是用CSS3创建的一个旋转六面体，主要用到了CSS3的animation和transform属性,如果对着两个属性不熟悉的，可以先点击这里熟悉一下 [animation](http://www.w3school.com.cn/cssref/pr_animation.asp) [transform](http://www.w3school.com.cn/cssref/pr_transform.asp)   
 为了看到更好的效果请尽可能使用高版本的浏览器 如chrome58 Firefox53 IE11等  
-实例效果如下：  
-
-<iframe style="width: 100%; height: 300px" src="http://sandbox.runjs.cn/show/fhcpxxzm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+实例效果如下：  [请猛击这里](http://www.jesse131.cn/hexahedron/index.html)
 
 #### 创建过程
 首先创建6个div作为六面体的6个面，初始状态使用绝对定位使6个面堆叠在一起
