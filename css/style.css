@@ -1,0 +1,155 @@
+.hexahedron {
+  margin: 100px auto;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.top,
+.bottom,
+.left,
+.right,
+.front,
+.back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 1px solid #000;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font: bold 30px/200px "microsoft yahei";
+  opacity: .6;
+  transition: 1s;
+}
+
+.top {
+  animation: opentop 1s linear 0s 1 both;
+}
+
+.bottom {
+  animation: openbottom 1s linear 1s 1 both;
+}
+
+.left {
+  animation: openleft 1s linear 2s 1 both;
+}
+
+.right {
+  animation: openright 1s linear 3s 1 both;
+}
+
+.front {
+  animation: openfront 1s linear 4s 1 both;
+}
+
+.back {
+  animation: openback 1s linear 5s 1 both;
+}
+
+.all {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: animation 6s both linear 6s infinite;
+}
+
+.all:hover .top {
+  color: #fff;
+  background: red;
+}
+
+.all:hover .bottom {
+  color: #fff;
+  background: orange;
+}
+
+.all:hover .left {
+  color: #fff;
+  background: yellow;
+}
+
+.all:hover .right {
+  color: #fff;
+  background: green;
+}
+
+.all:hover .front {
+  color: #fff;
+  background: cyan;
+}
+
+.all:hover .back {
+  color: #fff;
+  background: blue;
+}
+
+@keyframes opentop {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(-100px) rotate3d(1, 0, 0, 90deg);
+    transform-origin: 0 0;//旋转的中心点
+  }
+}
+
+@keyframes openbottom {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(-100px) rotate3d(1, 0, 0, -90deg);
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes openleft {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(-100px) rotate3d(0, 1, 0, -90deg);
+    transform-origin: 0 0;
+  }
+}
+
+@keyframes openright {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(-100px) rotate3d(0, 1, 0, 90deg);
+    transform-origin: 100% 50%;
+  }
+}
+
+@keyframes openfront {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(100px);
+  }
+}
+
+@keyframes openback {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateZ(-100px);
+  }
+}
+
+
+@keyframes animation {
+  0% {
+    transform: rotate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
